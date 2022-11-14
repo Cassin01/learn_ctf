@@ -40,4 +40,13 @@ chmod u+x ./exec_me
 
 # q8
 
-finderでクリックしたらwordが開く(正攻法でない気がする)
+finderでクリックしたらwordが開く
+
+# q9
+
+webインスペクタを起動, `{`を検索
+
+# q10
+
+Exif情報  
+mac のプレビューでℹ️ マークをクリック
