@@ -82,3 +82,8 @@ libreoffice ./misc100.zip
 $ ./a.out ruoYced_ehpigniriks_i_llrg_stae 4
 ```
 
+# q21
+
+```sh
+brew install --cask idafree
+```
