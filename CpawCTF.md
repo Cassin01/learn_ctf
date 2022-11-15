@@ -60,3 +60,25 @@ webインスペクタを開く
 1. @wireshark
     - file>export opject>http
 2. http拡張子を追加してブラウザでひらく
+
+# q18
+
+`%/s/lovelive!//g`
+
+# q19
+
+```sh
+$ file misc100.zip
+misc100.zip: OpenDocument Drawing
+```
+
+```sh
+libreoffice ./misc100.zip
+```
+
+# q20
+
+```sh
+$ ./a.out ruoYced_ehpigniriks_i_llrg_stae 4
+```
+
