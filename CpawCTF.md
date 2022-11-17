@@ -76,14 +76,55 @@ misc100.zip: OpenDocument Drawing
 libreoffice ./misc100.zip
 ```
 
-# q20
+# q25
 
 ```sh
 $ ./a.out ruoYced_ehpigniriks_i_llrg_stae 4
 ```
 
-# q21
+# q26
 
 ```sh
 brew install --cask idafree
 ```
+
+# q27
+
+```mysql
+select * from palloc_home;
+```
+
+# q28 can u login
+
+```zsh
+brew install tnftp
+```
+
+```zsh
+ftp
+ftp> open 118.27.110.77
+Connected to 118.27.110.77.
+220 Welcome to Cpaw CTF FTP service.
+Name (118.27.110.77:root): cpaw_user
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> ls -a
+229 Entering Extended Passive Mode (|||60017|)
+150 Here comes the directory listing.
+drwxr-xr-x    2 ftp      ftp            42 Mar 17  2021 .
+drwxr-xr-x    2 ftp      ftp            42 Mar 17  2021 ..
+-rw-r--r--    1 ftp      ftp            39 Sep 01  2017 .hidden_flag_file
+-rw-r--r--    1 ftp      ftp
+ftp> less .hidden_flag_file
+```
+
+# q23
+
+Docker上のgdbで以下のエラー
+```
+warning: Error disabling address space randomization: Operation not permitted
+```
+
