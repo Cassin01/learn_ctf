@@ -133,4 +133,7 @@ warning: Error disabling address space randomization: Operation not permitted
 docker run -i -t --name ctf1 --cap-add=SYS_PTRACE --security-opt="seccomp=unconfined" ctf1 /bin/bash
 ```
 
+## gdb
 
+- `disas main`: disassemble main function
+- `info register`: show register
