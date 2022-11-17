@@ -124,7 +124,13 @@ ftp> less .hidden_flag_file
 # q23
 
 Docker上のgdbで以下のエラー
-```
+
+```txt
 warning: Error disabling address space randomization: Operation not permitted
 ```
+
+```sh
+docker run -i -t --name ctf1 --cap-add=SYS_PTRACE --security-opt="seccomp=unconfined" ctf1 /bin/bash
+```
+
 
